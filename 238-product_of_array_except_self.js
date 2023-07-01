@@ -86,12 +86,12 @@ var productExceptSelf = function (nums) {
   for (let i = 0; i < nums.length; i++) {
     sums[i] = leftProduct;
     leftProduct *= nums[i];
-    console.log('left', leftProduct);
+    console.log("left", leftProduct);
   }
   for (let i = nums.length - 1; i >= 0; i--) {
     sums[i] *= rightProduct;
     rightProduct *= nums[i];
-    console.log('right', rightProduct);
+    console.log("right", rightProduct);
   }
   //   }
   for (let i = 0; i < sums.length; i++) {

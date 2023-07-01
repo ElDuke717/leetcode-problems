@@ -11,9 +11,8 @@ consisting of non-space characters only.
 // Output: 5
 // Explanation: The last word is "World" with length 5.
 
-
 //i: string
-//o: number 
+//o: number
 
 //get the last index of a space before a word, space before a letter. Use a regex to capture this pattern. Use string.prototype.search()
 // save that index to a variable
@@ -25,27 +24,26 @@ consisting of non-space characters only.
  * @param {string} s
  * @return {number}
  */
-var lengthOfLastWord = function(s) {
+var lengthOfLastWord = function (s) {
   const hold = [];
-  for(let i=0; i<s.length; i++) {
-    if (s[i] === ' ' && s[i+1] !== ' ') hold.push(i+1);
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] === " " && s[i + 1] !== " ") hold.push(i + 1);
   }
   console.log(hold);
-  console.log(hold[hold.length-1]);
-  const index = hold[hold.length-1];
-  console.log(index)
+  console.log(hold[hold.length - 1]);
+  const index = hold[hold.length - 1];
+  console.log(index);
   return s.slice(index);
 };
 
+lengthOfLastWord("Hello World");
+lengthOfLastWord("   fly me   to   the moon  ");
 
-lengthOfLastWord('Hello World');
-lengthOfLastWord('   fly me   to   the moon  ')
+const string = "   fly me   to   the moon  ";
+console.log(string.length);
 
-const string = '   fly me   to   the moon  '
-console.log(string.length)
-
-const regex1 = new RegExp(' [a-z]', 'g');
-regex1.test(string)
+const regex1 = new RegExp(" [a-z]", "g");
+regex1.test(string);
 console.log(regex1.lastIndex);
-regex1.test(string)
+regex1.test(string);
 console.log(regex1.lastIndex);

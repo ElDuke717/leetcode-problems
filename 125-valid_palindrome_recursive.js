@@ -29,11 +29,11 @@ var isPalindrome = function (s) {
 };
 
 //console.log(isPalindrome('racecar')); // true
-console.log(isPalindrome('A man, a plan, a canal: Panama', 'true')); // true
-console.log(isPalindrome('race a car')); // false
-console.log('ab_a', isPalindrome('ab_a'), 'true'); // true
-console.log('0P', isPalindrome('0P'), 'false'); // false
-console.log('race a car', isPalindrome('race a car'), 'false'); // false
+console.log(isPalindrome("A man, a plan, a canal: Panama", "true")); // true
+console.log(isPalindrome("race a car")); // false
+console.log("ab_a", isPalindrome("ab_a"), "true"); // true
+console.log("0P", isPalindrome("0P"), "false"); // false
+console.log("race a car", isPalindrome("race a car"), "false"); // false
 
 // function palindrome(string) {
 //   string = string.toLowerCase().replace(/[^\w\s]|_/g, '');

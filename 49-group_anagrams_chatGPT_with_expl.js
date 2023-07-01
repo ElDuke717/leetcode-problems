@@ -12,7 +12,7 @@ var groupAnagrams = function (strs) {
   // iterate over the strs array
   for (let str of strs) {
     // sortedStr sorts the characters of each string and rejoins them
-    let sortedStr = str.split('').sort().join('');
+    let sortedStr = str.split("").sort().join("");
     // if map already contains a sorted version of a string, then push the string to an array implicity assigned as key to that value
     if (map[sortedStr]) {
       map[sortedStr].push(str);
@@ -26,6 +26,4 @@ var groupAnagrams = function (strs) {
   return Object.values(map);
 };
 
-console.log(
-  groupAnagrams(['eat', 'tea', 'tan', 'ate', 'nat', 'bat'])
-); // [ [ 'eat', 'tea', 'ate' ], [ 'tan', 'nat' ], [ 'bat' ] ]
+console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"])); // [ [ 'eat', 'tea', 'ate' ], [ 'tan', 'nat' ], [ 'bat' ] ]

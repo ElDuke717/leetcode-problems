@@ -38,12 +38,12 @@ You are not allowed to solve the problem using any serialize methods (such as e
  */
 var encode = function (strs) {
   // declare code assigned to the value of the strings joined with an asterisk, then each char is split on an array
-  let code = strs.join('Û').split('');
+  let code = strs.join("Û").split("");
   // iterate over the array code, replacing each element not an asterisk with it's charcode,
   console.log(code);
   for (let i = 0; i < code.length; i++) {
-    if (code[i] === ' ') {
-      code[i] = 'þ';
+    if (code[i] === " ") {
+      code[i] = "þ";
     }
     // get the charCodeAt for each character, subtract one from it
     code[i] = code[i].charCodeAt() - 1;
@@ -51,7 +51,7 @@ var encode = function (strs) {
     code[i] = String.fromCharCode(code[i]);
   }
   // return the elements joined with a -
-  return code.join('');
+  return code.join("");
 };
 
 /**
@@ -62,7 +62,7 @@ var encode = function (strs) {
  */
 var decode = function (s) {
   // split is assigned the value of s split onto an array.
-  let split = s.split('');
+  let split = s.split("");
   // iterate over split
   for (let i = 0; i < split.length; i++) {
     // change each letter to corresponding charcode plus 1
@@ -70,15 +70,15 @@ var decode = function (s) {
     // replace each code with it's corresponding char
     split[i] = String.fromCharCode(split[i]);
     // replace asterisks with a space
-    if (split[i] === 'Û') {
-      split[i] = ' ';
+    if (split[i] === "Û") {
+      split[i] = " ";
     }
   }
   // join all characters together
   // split characters into separate strings with split passing in a space.
   // return the array
-  split.join('').split(' ');
-  return split.map((el) => el.replace('þ', ' '));
+  split.join("").split(" ");
+  return split.map((el) => el.replace("þ", " "));
 };
 
 /**
@@ -86,9 +86,9 @@ var decode = function (s) {
  * decode(encode(strs));
  */
 
-const encoded = encode(['Hello', 'World']);
-const message = encode(['']);
-const trouble = encode(['', '4 ']);
+const encoded = encode(["Hello", "World"]);
+const message = encode([""]);
+const trouble = encode(["", "4 "]);
 // console.log(decode(encoded));
 // console.log(decode(message));
 console.log(decode(trouble)); // ["","4 "]

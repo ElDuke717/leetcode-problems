@@ -1,0 +1,36 @@
+{
+  "name": "problems",
+  "version": "1.0.0",
+  "description": "A collection of LeetCode and other problems with solutions",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "format": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElDuke717/leetcode-problems.git"
+  },
+  "keywords": [
+    "algorithms",
+    "leetcode",
+    "data",
+    "structures",
+    "problem",
+    "solving"
+  ],
+  "author": "Nick Huemmer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ElDuke717/leetcode-problems/issues"
+  },
+  "homepage": "https://github.com/ElDuke717/leetcode-problems#readme",
+  "devDependencies": {
+    "eslint": "^8.44.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.8"
+  }
+}

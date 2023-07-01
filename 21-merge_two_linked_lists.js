@@ -1,22 +1,22 @@
-const list1 = [1,2,4]; 
-const list2 = [1,3,4]
+const list1 = [1, 2, 4];
+const list2 = [1, 3, 4];
 
-function mergeTwoLists (l1, l2) {
-    var mergedHead = { val : -1, next : null },
-        crt = mergedHead;
-    while(l1 && l2) {
-        if(l1.val > l2.val) {
-            crt.next = l2;
-            l2 = l2.next;
-        } else {
-            crt.next = l1;
-            l1 = l1.next;
-        }
-        crt = crt.next;
+function mergeTwoLists(l1, l2) {
+  var mergedHead = { val: -1, next: null },
+    crt = mergedHead;
+  while (l1 && l2) {
+    if (l1.val > l2.val) {
+      crt.next = l2;
+      l2 = l2.next;
+    } else {
+      crt.next = l1;
+      l1 = l1.next;
     }
-    crt.next = l1 || l2;
-    
-    return mergedHead.next;
-};
+    crt = crt.next;
+  }
+  crt.next = l1 || l2;
+
+  return mergedHead.next;
+}
 
 mergeTwoLists(list1, list2);

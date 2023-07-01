@@ -41,7 +41,7 @@ var encode = function (strs) {
   const hold = [];
   function coder(str) {
     //declare prefix, assigned the value of the strings length and a #
-    const prefix = str.length + '²';
+    const prefix = str.length + "²";
     // split string into separate characters
     const s = [...str];
     // iterate over each character in the string and change it to the charCode
@@ -52,7 +52,7 @@ var encode = function (strs) {
       s[i] = String.fromCharCode(s[i]);
     }
     // join elements of s back together
-    const converted = s.join('');
+    const converted = s.join("");
     return prefix + converted;
   }
   // iterate over words, passing into coder, push to hold
@@ -60,7 +60,7 @@ var encode = function (strs) {
     hold.push(coder(strs[i]));
   }
   // return hold joined together
-  const finish = hold.join('');
+  const finish = hold.join("");
   console.log(finish);
   return finish;
 };
@@ -81,7 +81,7 @@ var decode = function (s) {
   // iterate over string s.  if split character at index i is not NaN when converted to a number and followed by hash,
   // record the index as i + 2 as key and i as value
   for (let i = 0; i < split.length; i++) {
-    if (+split[i] !== NaN && split[i + 1] === '²') {
+    if (+split[i] !== NaN && split[i + 1] === "²") {
       cache[i + 2] = i + +split[i] + 2;
     }
   }
@@ -99,7 +99,7 @@ var decode = function (s) {
       seg[i] = String.fromCharCode(seg[i]);
     }
     // push each seg to hold
-    hold.push(seg.join(''));
+    hold.push(seg.join(""));
   }
   return hold;
 };
@@ -109,10 +109,10 @@ var decode = function (s) {
 //    * decode(encode(strs));
 //    */
 
-const encoded = encode(['Hello', 'World']);
-const stinks = encode(['WU', '$B']);
-const message = encode(['']);
-const trouble = encode(['', '4 ']);
+const encoded = encode(["Hello", "World"]);
+const stinks = encode(["WU", "$B"]);
+const message = encode([""]);
+const trouble = encode(["", "4 "]);
 console.log(decode(encoded));
 console.log(decode(message));
 console.log(decode(trouble)); // ["","4 "]
