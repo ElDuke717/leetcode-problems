@@ -9,12 +9,12 @@ class Node {
 
 // We create a new binary search tree by creating a new node
 // with values for every node
-const a = new Node('a');
-const b = new Node('b');
-const c = new Node('c');
-const d = new Node('d');
-const e = new Node('e');
-const f = new Node('f');
+const a = new Node("a");
+const b = new Node("b");
+const c = new Node("c");
+const d = new Node("d");
+const e = new Node("e");
+const f = new Node("f");
 
 // We then set the left and right values for each node
 a.left = b;
@@ -22,3 +22,70 @@ a.right = c;
 b.left = d;
 b.right = e;
 c.right = f;
+
+// ****This is the non-recursive, iterative solution that uses a stack***
+// starting at the root, get the left and right values if they exist
+// and push them onto an array and then move to the next node
+// using a stack data structure allows us to handle the branching values
+
+// Time: O(n)
+// Space: O(n)
+const depthFirstValues = (root) => {
+  // test if root is null
+  if (root === null) return [];
+  // array to hold values
+  const values = [];
+  // use the stack array to hold nodes, stack holds the first node
+  const stack = [root];
+  // use a while loop to iterate over the stack
+  while (stack.length > 0) {
+    // the current node is the what's popped off the stack
+    const current = stack.pop();
+    // push the value of current to the values array
+    values.push(current.val);
+    // as long as current has values
+    if (current.right) {
+      values.push(current.right);
+    }
+    if (current.left) {
+      values.push(current.left);
+    }
+  }
+  return values;
+};
+
+console.log(depthFirstValues(a)); // [ 'a', 'c', 'f', 'b', 'e', 'd' ]
+
+//* **The Recursive Solution ***/
+// Time: O(n)
+// Space: O(n)
+
+// We create a new binary search tree by creating a new node
+// with values for every node
+const g = new Node("g");
+const h = new Node("h");
+const i = new Node("i");
+const j = new Node("j");
+const k = new Node("k");
+const l = new Node("l");
+
+// We then set the left and right values for each node
+g.left = h;
+g.right = i;
+h.left = j;
+h.right = k;
+i.right = l;
+
+// This solution uses recursion to traverse down either side of the tree.
+const depthFirstValuesRecursive = (root) => {
+  // base case
+  if (root === null) return [];
+  // recurse down the left branch from root
+  const leftValues = depthFirstValuesRecursive(root.left);
+  // recurse down the right branch from the root
+  const rightValues = depthFirstValuesRecursive(root.right);
+  // return the root plus the evaluated result from leftValues and rightValues
+  return [root.value, ...leftValues, ...rightValues];
+};
+
+console.log(depthFirstValuesRecursive(g)); // [ 'g', 'h', 'j', 'k', 'i', 'l' ]
