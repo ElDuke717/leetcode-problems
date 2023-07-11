@@ -1,7 +1,7 @@
 function palindrome(string) {
   string = string.toLowerCase().replace(/\W/g, "");
   if (string.length === 0) return true;
-  else if (string[0] === string[string.length - 1]) {
+  if (string[0] === string[string.length - 1]) {
     string = string.slice(1, string.length - 1);
     return palindrome(string);
   }

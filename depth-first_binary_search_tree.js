@@ -45,10 +45,10 @@ const depthFirstValues = (root) => {
     values.push(current.val);
     // as long as current has values
     if (current.right) {
-      values.push(current.right);
+      stack.push(current.right);
     }
     if (current.left) {
-      values.push(current.left);
+      stack.push(current.left);
     }
   }
   return values;
@@ -59,22 +59,6 @@ console.log(depthFirstValues(a)); // [ 'a', 'c', 'f', 'b', 'e', 'd' ]
 //* **The Recursive Solution ***/
 // Time: O(n)
 // Space: O(n)
-
-// We create a new binary search tree by creating a new node
-// with values for every node
-const g = new Node("g");
-const h = new Node("h");
-const i = new Node("i");
-const j = new Node("j");
-const k = new Node("k");
-const l = new Node("l");
-
-// We then set the left and right values for each node
-g.left = h;
-g.right = i;
-h.left = j;
-h.right = k;
-i.right = l;
 
 // This solution uses recursion to traverse down either side of the tree.
 const depthFirstValuesRecursive = (root) => {
@@ -88,4 +72,4 @@ const depthFirstValuesRecursive = (root) => {
   return [root.value, ...leftValues, ...rightValues];
 };
 
-console.log(depthFirstValuesRecursive(g)); // [ 'g', 'h', 'j', 'k', 'i', 'l' ]
+console.log(depthFirstValuesRecursive(a)); //  [ 'a', 'b', 'd', 'e', 'c', 'f' ]

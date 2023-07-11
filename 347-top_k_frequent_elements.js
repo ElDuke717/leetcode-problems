@@ -8,7 +8,7 @@ elements. You may return the answer in any order.
  * @param {number} k
  * @return {number[]}
  */
-var topKFrequent = function (nums, k) {
+const topKFrequent = function (nums, k) {
   // declare cache, an object to hold values and their count.
   const cache = {};
   // iterate over nums, if element is not in cache, add it as key and value at 1, or add 1
