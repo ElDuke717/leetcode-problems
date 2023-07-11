@@ -31,6 +31,7 @@ c.right = f;
 // The function should return the total sum of all values in the tree.
 
 const treeSum = (root) => {
+  if (root === null) return 0;
   // use depth first traversal get all values of the tree
   let sum = 0;
   // nodes array to holds each node, initially with root

@@ -42,13 +42,13 @@ const depthFirstValues = (root) => {
     // the current node is the what's popped off the stack
     const current = stack.pop();
     // push the value of current to the values array
-    values.push(current.val);
+    values.push(current.value);
     // as long as current has values
-    if (current.right) {
-      stack.push(current.right);
-    }
     if (current.left) {
       stack.push(current.left);
+    }
+    if (current.right) {
+      stack.push(current.right);
     }
   }
   return values;
