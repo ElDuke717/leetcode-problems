@@ -26,7 +26,6 @@ c.right = f;
 //  / \     \
 // d   e     f
 
-
 // Think: breadth first traversal uses a queue, whereas a depth first traversal uses a stack
 
 const breadthFirstValues = (root) => {
@@ -57,9 +56,7 @@ const breadthFirstValues = (root) => {
 // Time: O(n)
 // Space: O(n)
 
-console.log(breadthFirstValues(a));
-
+console.log(breadthFirstValues(a)); // [ 'a', 'b', 'c', 'd', 'e', 'f' ]
 
 // Note - there is no recursive solution for breadth first traversal - the queue order
 // prevents the use of recursion as is used in depth first traversal.
-
