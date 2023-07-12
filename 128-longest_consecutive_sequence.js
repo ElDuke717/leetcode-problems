@@ -63,11 +63,11 @@ const longestConseqSeq = (arr) => {
     // we can then iterate and increment the current value until it is not in the set
     let current = num;
 
-    const count = 1;
+    let count = 1;
     while (set.has(current + 1)) {
     // increment current and longest
       current += 1;
-      longest += 1;
+      count += 1;
     }
     // update longest, assign the value of the math.max of longest and count
     longest = Math.max(longest, count);
@@ -77,5 +77,5 @@ const longestConseqSeq = (arr) => {
   return longest;
 };
 
-console.log(longestConseqSeq([100, 4, 200, 1, 3, 2]));
-console.log(longestConseqSeq([0, 3, 7, 2, 5, 8, 4, 6, 0, 1]));
+console.log(longestConseqSeq([100, 4, 200, 1, 3, 2])); // 4
+console.log(longestConseqSeq([0, 3, 7, 2, 5, 8, 4, 6, 0, 1])); // 9
