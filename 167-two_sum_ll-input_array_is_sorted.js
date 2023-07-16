@@ -60,7 +60,7 @@ const twoSum = (numbers, target) => {
   let right = numbers.length - 1;
   // iterate over the array
   while (left < right) {
-    currentSum = numbers[left] + numbers[right];
+    const currentSum = numbers[left] + numbers[right];
     // if the current sum is equal to the target, return the indices
     if (currentSum > target) {
       right -= 1;
@@ -77,5 +77,5 @@ const twoSum = (numbers, target) => {
 console.log(twoSum([2, 7, 11, 15], 9)); // [1, 2]
 console.log(twoSum([2, 3, 4], 6)); // [1, 3]
 console.log(twoSum([-1, 0], -1));
-[1, 2];
+// [1, 2];
 console.log(twoSum([0, 0, 3, 4], 0)); // [1, 2]
