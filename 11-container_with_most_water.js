@@ -76,3 +76,11 @@ const maxAreaOpt = (heights) => {
 
 console.log(maxAreaOpt([1, 8, 6, 2, 5, 4, 8, 3, 7])); // 49
 console.log(maxAreaOpt([1, 1])); // 1
+
+/* 
+The time complexity of this solution is O(n).
+
+This is because we're performing a single pass through the input array with two pointers, `left` and `right`. The `left` pointer moves to the right, and the `right` pointer moves to the left. Regardless of the size of the input, we are always doing a single pass from both ends. Hence, the time complexity is linear in the size of the input array. 
+
+The space complexity of the solution is O(1) because we are not using any additional data structures that scale with the size of the input. The variables `maxArea`, `left`, `right`, `height`, `width`, and `area` do not vary with the size of the input array.
+*/
