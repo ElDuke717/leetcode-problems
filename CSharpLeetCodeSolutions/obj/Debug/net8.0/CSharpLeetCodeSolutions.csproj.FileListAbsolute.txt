@@ -1,0 +1,15 @@
+/Users/nickhuemmer/problems/leetcode-problems/CSharpLeetCodeSolutions/obj/Debug/net8.0/CSharpLeetCodeSolutions.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nickhuemmer/problems/leetcode-problems/CSharpLeetCodeSolutions/obj/Debug/net8.0/CSharpLeetCodeSolutions.AssemblyInfoInputs.cache
+/Users/nickhuemmer/problems/leetcode-problems/CSharpLeetCodeSolutions/obj/Debug/net8.0/CSharpLeetCodeSolutions.AssemblyInfo.cs
+/Users/nickhuemmer/problems/leetcode-problems/CSharpLeetCodeSolutions/obj/Debug/net8.0/CSharpLeetCodeSolutions.csproj.CoreCompileInputs.cache
+/Users/nickhuemmer/problems/leetcode-problems/CSharpLeetCodeSolutions/obj/Debug/net8.0/CSharpLeetCodeSolutions.sourcelink.json
+/Users/nickhuemmer/problems/leetcode-problems/CSharpLeetCodeSolutions/bin/Debug/net8.0/CSharpLeetCodeSolutions
+/Users/nickhuemmer/problems/leetcode-problems/CSharpLeetCodeSolutions/bin/Debug/net8.0/CSharpLeetCodeSolutions.deps.json
+/Users/nickhuemmer/problems/leetcode-problems/CSharpLeetCodeSolutions/bin/Debug/net8.0/CSharpLeetCodeSolutions.runtimeconfig.json
+/Users/nickhuemmer/problems/leetcode-problems/CSharpLeetCodeSolutions/bin/Debug/net8.0/CSharpLeetCodeSolutions.dll
+/Users/nickhuemmer/problems/leetcode-problems/CSharpLeetCodeSolutions/bin/Debug/net8.0/CSharpLeetCodeSolutions.pdb
+/Users/nickhuemmer/problems/leetcode-problems/CSharpLeetCodeSolutions/obj/Debug/net8.0/CSharpLeetCodeSolutions.dll
+/Users/nickhuemmer/problems/leetcode-problems/CSharpLeetCodeSolutions/obj/Debug/net8.0/refint/CSharpLeetCodeSolutions.dll
+/Users/nickhuemmer/problems/leetcode-problems/CSharpLeetCodeSolutions/obj/Debug/net8.0/CSharpLeetCodeSolutions.pdb
+/Users/nickhuemmer/problems/leetcode-problems/CSharpLeetCodeSolutions/obj/Debug/net8.0/CSharpLeetCodeSolutions.genruntimeconfig.cache
+/Users/nickhuemmer/problems/leetcode-problems/CSharpLeetCodeSolutions/obj/Debug/net8.0/ref/CSharpLeetCodeSolutions.dll

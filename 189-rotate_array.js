@@ -57,10 +57,24 @@ Follow up:
 //   return nums;
 // };
 
+// The most efficient and easier to understand solution:
+
 var rotate = function (nums, k) {
-  let rotate = nums.slice(nums.length - k);
-  nums = nums + rotate;
-  console.log(nums);
+  k = k % nums.length; // Handle rotations larger than array length - use the remainder for k
+  reverse(nums, 0, nums.length - 1); // Step 1: Reverse the whole array
+  reverse(nums, 0, k - 1); // Step 2: Reverse the first k elements - re-reverses the first elements
+  reverse(nums, k, nums.length - 1); // Step 3: Reverse the rest, the original elements that were at the start
+
+  // Helper function to reverse a portion of the array
+  function reverse(arr, start, end) {
+    while (start < end) {
+      let temp = arr[start];
+      arr[start] = arr[end];
+      arr[end] = temp;
+      start++;
+      end--;
+    }
+  }
   return nums;
 };
 
