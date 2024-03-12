@@ -14,36 +14,40 @@ consisting of non-space characters only.
 //i: string
 //o: number
 
-//get the last index of a space before a word, space before a letter. Use a regex to capture this pattern. Use string.prototype.search()
-// save that index to a variable
-// pass the last word space index into slice
-// slice off the last word, save to a variable
-// return the length of that string.
-
+// trim the original string to remove trailing spaces
+// find the last consecutive sequence of characters that are not letters
+// iterate over the string phrase backward and add the first character
+// continue adding characters until you reach a space
+// count all characters
+// when reach first space after a character, return the count
 /**
  * @param {string} s
  * @return {number}
  */
 var lengthOfLastWord = function (s) {
-  const hold = [];
-  for (let i = 0; i < s.length; i++) {
-    if (s[i] === " " && s[i + 1] !== " ") hold.push(i + 1);
+  s = s.trim();
+  let chars = 0;
+
+  for (let i = s.length - 1; i >= 0; i -= 1) {
+    if (s[i] !== ' ') {
+      chars += 1;
+    } else {
+      break;
+    }
   }
-  console.log(hold);
-  console.log(hold[hold.length - 1]);
-  const index = hold[hold.length - 1];
-  console.log(index);
-  return s.slice(index);
+  return chars;
 };
 
-lengthOfLastWord("Hello World");
-lengthOfLastWord("   fly me   to   the moon  ");
+const phrase1 = 'Hello World';
+const phrase2 = '   fly me   to   the moon  ';
+const phrase3 = 'luffy is still joyboy';
+const phrase4 = ' a ';
+const phrase5 = ' ';
+const phrase6 = 'a';
 
-const string = "   fly me   to   the moon  ";
-console.log(string.length);
-
-const regex1 = new RegExp(" [a-z]", "g");
-regex1.test(string);
-console.log(regex1.lastIndex);
-regex1.test(string);
-console.log(regex1.lastIndex);
+console.log(`${phrase1} last word length is`, lengthOfLastWord(phrase1)); // 5
+console.log(`${phrase2} last word length is`, lengthOfLastWord(phrase2)); // 4
+console.log(`${phrase3} last word length is`, lengthOfLastWord(phrase3)); // 6
+console.log(`${phrase4} last word length is`, lengthOfLastWord(phrase4)); // 1
+console.log(`${phrase5} last word length is`, lengthOfLastWord(phrase5)); // 6
+console.log(`${phrase6} last word length is`, lengthOfLastWord(phrase6)); // 6
