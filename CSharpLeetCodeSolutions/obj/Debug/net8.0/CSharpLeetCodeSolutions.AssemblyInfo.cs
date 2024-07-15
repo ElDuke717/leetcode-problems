@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CSharpLeetCodeSolutions")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8194c09650030f0cb0e490334521961b49accb6e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6188c19fc26fc2f56b750ad8026aa6f200e89020")]
 [assembly: System.Reflection.AssemblyProductAttribute("CSharpLeetCodeSolutions")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CSharpLeetCodeSolutions")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

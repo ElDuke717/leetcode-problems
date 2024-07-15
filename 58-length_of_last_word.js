@@ -49,5 +49,5 @@ console.log(`${phrase1} last word length is`, lengthOfLastWord(phrase1)); // 5
 console.log(`${phrase2} last word length is`, lengthOfLastWord(phrase2)); // 4
 console.log(`${phrase3} last word length is`, lengthOfLastWord(phrase3)); // 6
 console.log(`${phrase4} last word length is`, lengthOfLastWord(phrase4)); // 1
-console.log(`${phrase5} last word length is`, lengthOfLastWord(phrase5)); // 6
-console.log(`${phrase6} last word length is`, lengthOfLastWord(phrase6)); // 6
+console.log(`${phrase5} last word length is`, lengthOfLastWord(phrase5)); // 0
+console.log(`${phrase6} last word length is`, lengthOfLastWord(phrase6)); // 1
