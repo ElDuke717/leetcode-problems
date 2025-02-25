@@ -26,15 +26,27 @@ console.log(twoSum([2, 1, 5, 3], 4));
 console.log(twoSum([2, 7, 11, 15], 9));
 console.log(twoSum([3, 2, 4], 6));
 console.log(twoSum([3, 3], 6));
+console.log(twoSum([2, 7, 11, 15], 9)); // [0, 1]
 
-//Python code - chatGPT will translate this as a class
-// class Solution:
-//   def twoSum(self, nums: List[int], target: int) -> List[int]:
-//     prevMap = {} # val : index
+const testCases = [
+  { nums: [2, 7, 11, 15], target: 9, expected: [0, 1] },
+  { nums: [3, 2, 4], target: 6, expected: [1, 2] },
+  { nums: [3, 3], target: 6, expected: [0, 1] },
+  { nums: [1, 2, 3, 4, 5], target: 8, expected: [2, 4] },
+  { nums: [0, 4, 3, 0], target: 0, expected: [0, 3] },
+  { nums: [-3, 4, 3, 90], target: 0, expected: [0, 2] },
+  { nums: [1, 1, 1, 1, 1], target: 2, expected: [0, 1] },
+  { nums: [1, 2, 5, 6, 7], target: 12, expected: [3, 4] },
+  { nums: [5, 75, 25], target: 100, expected: [1, 2] },
+  { nums: [3, 5, -4, 8, 11, 1, -1, 6], target: 10, expected: [2, 4] },
+];
 
-//     for i, n in enumerate(nums):
-//       diff = target - n
-//       if diff in prevMap:
-//         return [prevMap[diff], i]
-//       prevMap[n] = i
-//     return
+testCases.forEach(({ nums, target, expected }, index) => {
+  const result = twoSum(nums, target);
+  console.log(
+    `Test Case ${index + 1}: `,
+    result.toString() === expected.toString()
+      ? 'Passed'
+      : `Failed (Expected: ${expected}, Got: ${result})`,
+  );
+});
